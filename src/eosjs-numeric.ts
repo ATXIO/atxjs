@@ -363,7 +363,7 @@ export const publicKeyToString = (key: Key) => {
  * Leaves other formats untouched
  */
 export const convertLegacyPublicKey = (s: string) => {
-    if (s.substr(0, 3) === 'EOS') {
+    if (s.substr(0, 3) === 'ATX') {
         return publicKeyToString(stringToPublicKey(s));
     }
     return s;
